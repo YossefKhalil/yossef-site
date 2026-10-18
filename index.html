@@ -21,8 +21,7 @@
     p { margin: 8px 0; }
     a { color: #00e5ff; text-decoration: none; }  /* links: neon cyan, fits the terminal */
     a:hover { background: #00e5ff; color: #0b0b0b; }
-    .cursor { animation: blink 1s steps(1) infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
+    input { background: none; border: none; outline: none; color: #22ff66; font: inherit; width: 70%; }
   </style>
 </head>
 <body>
@@ -48,7 +47,48 @@
   <p class="dim">yossef@dev:~$ echo "cv"</p>
   <p><a href="Yossef-Mohamed-CV.pdf" download>[ download cv ]</a></p>
 
-  <p>yossef@dev:~$ <span class="cursor">_</span></p>
+  <div id="log"></div>
+
+  <p class="dim">terminal is live — ask me anything about yossef</p>
+  <p>yossef@dev:~$ <input id="cmd" autocomplete="off" spellcheck="false"></p>
+
+  <script>
+    const log = document.getElementById("log");
+    const cmd = document.getElementById("cmd");
+
+    cmd.addEventListener("keydown", async (event) => {
+      if (event.key !== "Enter" || cmd.value.trim() === "") return;
+      const question = cmd.value.trim();
+      cmd.value = "";
+
+      addLine("yossef@dev:~$ " + question, "dim");
+      const answer = addLine("thinking...", "dim");
+      window.scrollTo(0, document.body.scrollHeight);
+
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: question }),
+        });
+        const data = await res.json();
+        answer.textContent = data.reply;
+      } catch (error) {
+        answer.textContent = "brain offline — try again later.";
+      }
+
+      answer.classList.remove("dim");
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+
+    function addLine(text, className) {
+      const line = document.createElement("p");
+      line.textContent = text;
+      if (className) line.classList.add(className);
+      log.appendChild(line);
+      return line;
+    }
+  </script>
 
 </body>
 </html>
