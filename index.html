@@ -22,7 +22,6 @@
     a { color: #00e5ff; text-decoration: none; }  /* links: neon cyan, fits the terminal */
     a:hover { background: #00e5ff; color: #0b0b0b; }
     input { background: none; border: none; outline: none; color: #22ff66; font: inherit; width: 70%; }
-    input::placeholder { color: #5f5f5f; }
   </style>
 </head>
 <body>
@@ -48,9 +47,11 @@
   <p class="dim">yossef@dev:~$ echo "cv"</p>
   <p><a href="Yossef-Mohamed-CV.pdf" download>[ download cv ]</a></p>
 
-  <div id="log"></div>
+  <div id="log">
+    <p class="dim">[ai] ready. ask me anything about yossef.</p>
+  </div>
 
-  <p>yossef@dev:~$ <input id="cmd" placeholder="tell me about yossef's projects" autocomplete="off" spellcheck="false"></p>
+  <p>yossef@dev:~$ <input id="cmd" autocomplete="off" spellcheck="false"></p>
 
   <script>
     const log = document.getElementById("log");
