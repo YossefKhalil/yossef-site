@@ -48,7 +48,7 @@
   <p><span style="color:#22ff66">[</span> <a href="Yossef-Mohamed-CV.pdf" download>download cv</a> <span style="color:#22ff66">]</span></p>
 
   <div id="log">
-    <p class="dim">live ai terminal, ask a question below</p>
+    <p class="dim">live ai terminal, ask about yossef below</p>
   </div>
 
   <p>yossef@dev:~$ <input id="cmd" autocomplete="off" spellcheck="false"></p>
@@ -78,7 +78,7 @@
         const data = await res.json();
         answer.textContent = data.reply;
       } catch (error) {
-        answer.textContent = "brain offline — try again later.";
+        answer.textContent = "AI OFFLINE";
       }
 
       answer.classList.remove("dim");
