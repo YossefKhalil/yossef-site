@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yossef Khalil</title>
+  <style>
+    /* terminal theme: black screen, green text */
+    body {
+      background: #0b0b0b;
+      color: #22ff66;
+      font-family: "Courier New", monospace;
+      max-width: 640px;
+      margin: 48px auto;
+      padding: 0 20px;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    .dim { color: #5f5f5f; }
+    h1 { font-size: 20px; margin: 8px 0; }
+    p { margin: 8px 0; }
+    a { color: #00e5ff; text-decoration: none; }  /* links: neon cyan, fits the terminal */
+    a:hover { background: #00e5ff; color: #0b0b0b; }
+    .cursor { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+</head>
+<body>
+
+  <p class="dim">yossef@dev:~$ echo "hi, i'm yossef"</p>
+  <h1>Hi, I'm Yossef</h1>
+
+  <p class="dim">yossef@dev:~$ echo "about"</p>
+  <p>
+    I'm a fresh MIS graduate who builds deployed, working systems by directing AI coding tools.
+    I made <a href="https://github.com/YossefKhalil/Manzili">Manzili</a>, a multi-vendor e-commerce platform,
+    I'm based in Alexandria, Egypt, and I'm into Tech, AI and automation.
+  </p>
+
+  <p class="dim">yossef@dev:~$ echo "links"</p>
+  <p>
+    <a href="https://github.com/yossefkhalil">github</a> /
+    <a href="https://linkedin.com/in/yossefkhalil">linkedin</a> /
+    <a href="mailto:yossefkhalil.eg@gmail.com">email</a> /
+    <a href="https://wa.me/201223755058">whatsapp</a>
+  </p>
+
+  <p class="dim">yossef@dev:~$ echo "cv"</p>
+  <p><a href="Yossef-Mohamed-CV.pdf" download>[ download cv ]</a></p>
+
+  <p>yossef@dev:~$ <span class="cursor">_</span></p>
+
+</body>
+</html>
