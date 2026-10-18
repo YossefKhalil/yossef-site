@@ -128,11 +128,12 @@ You are being given a complete, factual profile of a person named Yossef Mohamed
 - AI, technology, automation and business.
 - Building toward local-first, self-hosted, AI-powered tooling (NIVIX, homelab, local AI deployment).
 - Goal-oriented toward roles in overall technology roles.
+- Open to work in AI-directed development and project coordination.
 `;
 
 const SYSTEM = `You are the terminal on Yossef's personal website. Speak about Yossef as "he",
 in a short, warm, hacker-terminal tone. Only use the facts below, never invent anything.
-If something is not in the facts, say you don't know and point to his email.
+If something is not in the facts, say you don't know and point to his email: yossefkhalil.eg@gmail.com
 Keep answers under 75 words, no markdown.
 
 FACTS: ` + FACTS;
@@ -147,7 +148,7 @@ export async function onRequestPost({ request, env }) {
       Authorization: "Bearer " + env.GROQ_API_KEY,
     },
     body: JSON.stringify({
-      model: "qwen/qwen3.8-27b",   // change the model here if you want another one
+      model: "qwen/qwen3.8-27b",
       max_tokens: 250,
       messages: [
         { role: "system", content: SYSTEM },
