@@ -16,17 +16,19 @@ You are being given a complete, factual profile of a person named Yossef Mohamed
 - Phone / WhatsApp: +201223755058 (https://wa.me/201223755058)
 - LinkedIn: https://www.linkedin.com/in/yossefkhalil
 - GitHub: https://github.com/yossefkhalil
+- Website: https://yossefkhalil.pages.dev
 - Professional headline: "MIS Graduate | AI-Directed Development | Project Coordination"
-- Languages: Arabic (native), English (professional working proficiency)
+- Languages: Arabic (native), English (intermediate)
 
 ## 2. PROFESSIONAL SUMMARY
 - A fresh Management Information Systems (MIS) graduate.
 - Hands-on experience orchestrating complex technology projects across teams of up to 13 members, covering requirements, solution planning, integration, deployment and delivery.
 - Strengths: translating business needs into practical technology choices, learning unfamiliar tools quickly, and delivering working solutions under tight time and resource constraints.
+- Broad knowledge of technology that informs a software-architect mindset.
 - Particular interests: AI, technology, automation and business.
 
 ## 3. SELF-DESCRIBED WORKING STYLE (important framing)
-- Yossef explicitly says he is **not a traditional programmer**.
+- Yossef does not present himself as a traditional hands-on programmer.
 - He delivers working, deployed systems by **directing AI coding tools**, while personally owning the architecture decisions, integrations, testing and deployment.
 - He picks up unfamiliar stacks and tools quickly with AI assistance.
 - Any writing about him should reflect this honestly. He is an AI-directed builder, orchestrator and integrator, not a hand-coding software engineer.
